@@ -1,4 +1,3 @@
-package com.company;
 
 import java.util.ArrayList;
 
@@ -128,11 +127,10 @@ public class Quadratic {
                 n = n / nextPrime;
             }
             switch (n) {
-                case -1 -> {
+                case(-1):{
                     primeFactors.add(-1);
-                    done = true;
                 }
-                case 1 -> done = true;
+                case (1): done = true;
             }
             nextPrime = nextPrime(nextPrime);
         }

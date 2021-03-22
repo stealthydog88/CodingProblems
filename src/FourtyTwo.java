@@ -1,4 +1,3 @@
-package com.company;
 
 import java.util.Scanner;
 
@@ -24,14 +23,14 @@ public class FourtyTwo {
             System.out.println("Your score is " + score + ". Would you like to keep playing? yes/no");
             if (scanner.next().equals("yes")) continue;
             else if(scanner.next().equals("no")){
-                System.out
+               // System.out
             }
         }
 
         return (score > 42);
     }
 
-    public static boolean ComputerGame(){
-
-    }
+//    public static boolean ComputerGame(){
+//
+//    }
 }

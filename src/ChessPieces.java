@@ -10,13 +10,13 @@ public class ChessPieces {
 
         numericalPosition = findNumericalPosition(pieceValue[1], pieceValue[2]);
 
-        switch (pieceValue[0]){
-            case "pawn": validMove = pawnMoves(numericalPosition); break;
-            case "knight": validMove = knightMoves(numericalPosition); break;
-            case "bishop": validMove = bishopMoves(numericalPosition); break;
-            case "rook": validMove = rookMoves(numericalPosition); break;
-            case "queen": validMove = queenMoves(numericalPosition); break;
-            case "king": validMove = kingMoves(numericalPosition); break;
+        switch (pieceValue[0]) {
+            case "pawn" -> validMove = pawnMoves(numericalPosition);
+            case "knight" -> validMove = knightMoves(numericalPosition);
+            case "bishop" -> validMove = bishopMoves(numericalPosition);
+            case "rook" -> validMove = rookMoves(numericalPosition);
+            case "queen" -> validMove = queenMoves(numericalPosition);
+            case "king" -> validMove = kingMoves(numericalPosition);
         }
 
         if (validMove) System.out.println(pieceValue[0] + " " + pieceValue[1] + " -> " + pieceValue[2] + " is a valid move.");

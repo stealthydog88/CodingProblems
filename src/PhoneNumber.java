@@ -1,4 +1,3 @@
-package com.company;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,10 +9,10 @@ public class PhoneNumber
         ArrayList<Integer> list = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         int nextDigit;
-        String firstSet = "";
-        String secondSet = "";
-        String thirdSet = "";
-        String finalString = "";
+        StringBuilder firstSet = new StringBuilder();
+        StringBuilder secondSet = new StringBuilder();
+        StringBuilder thirdSet = new StringBuilder();
+        String finalString;
 
         for (int i = 10; i > 0; i--)
         {
@@ -23,17 +22,17 @@ public class PhoneNumber
 
         for (int i = 0; i < 3; i++)
         {
-            firstSet = firstSet + list.get(i);
+            firstSet.append(list.get(i));
         }
 
         for (int i = 3; i < 6; i++)
         {
-            secondSet = secondSet + list.get(i);
+            secondSet.append(list.get(i));
         }
 
         for (int i = 6; i < 10; i++)
         {
-            thirdSet = thirdSet + list.get(i);
+            thirdSet.append(list.get(i));
         }
 
         finalString = "(" + firstSet + ") " + secondSet + "-" + thirdSet;
