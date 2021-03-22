@@ -2,16 +2,18 @@
 import java.util.Scanner;
 
 public class FourtyTwo {
+
     static Scanner scanner = new Scanner(System.in);
     static int score = 0;
     static int computerScore = 0;
 
     public static void main(String[] args){
 
-        System.out.println("Would you like to play?");
-        String input = scanner.next();
         boolean bust = false;
         boolean computerBust;
+
+        System.out.println("Would you like to play?");
+        String input = scanner.next();
 
         if (input.equals("y")) bust = Game();
         else System.exit(1);
@@ -25,9 +27,10 @@ public class FourtyTwo {
             if (computerBust){
                 System.out.println("\r\n The computer busted at " + computerScore + "! You Win!");
             }
-            else {
+            else if(computerScore > score) {
                 System.out.println("\r\n The computer beat you with a score of " + computerScore + ". Better luck next time!");
             }
+            else if(computerScore == score) System.out.println("\r\n The computer tied you!");
         }
     }
 
@@ -53,7 +56,7 @@ public class FourtyTwo {
             computerScore = computerScore + tempScore;
             if (computerScore > 42) break;
             System.out.println("The computer's score is at " + computerScore);
-            if((computerScore > score)){
+            if((computerScore >= score)){
                 break;
             }
         }
